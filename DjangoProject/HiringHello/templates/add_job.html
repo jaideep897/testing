@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+   
+
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <style>
+          .form-data::after {
+        content: ' *';
+        color: red;
+          }
+
+          input:invalid {
+        border: 3px solid slategrey;
+      }
+
+      input:invalid:required {
+        background-color: #d4e3f1;
+      }
+
+      input:valid {
+        border: 2px solid black;
+          background-color: white;
+      }
+      </style>
+  </head>
+  <body style="border: 3px solid #9b8d8d;margin-left:100px;margin-right: 100px;margin-top: 10px;margin-bottom: 10px;background-color: gainsboro">
+     
+  <div class="container">
+      <br>
+        <h1>Company Detail</h1>
+      <br>
+      <div id="form">
+        <form action="" method="POST" style="background-color: slategrey;border: 3px solid cornflowerblue;padding: 50px;padding-top: 50px;padding-bottom: 50px;align-content: center">
+{% csrf_token %}
+          <div class="form-group" style="width: 400px">
+
+            <label for="Name">Company Name</label>
+            <input required type="text" class="form-control form-data" id="Name" name="name" value="" required/>
+
+          </div>
+
+          <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="Postdate" >Post Date</label>
+            <input type="date" class="form-control form-data" name='Postdate'  id="Postdate" value="{% now 'yyyy-mm-dd'%}" required/>
+          </div>
+
+          <div class="form-group" style="width: 400px;margin-left: 600px;">
+            <label for="Technology">Technology</label>
+            <input  type='text' class="form-control form-data" name='Technology' id="Technology" value="" required/>
+          </div>
+
+            <div class="form-group" style="width: 400px;margin-top: -80px">
+            <label for="Description">Description</label>
+            <input type="text" class="form-control form-data" name='Description' id="Description" value="" required />
+            </div>
+
+            <div class="form-group" style="width: 400px;margin-left: 600px;">
+              <label for="salary">Salary LPA</label>
+              <input type="text" class="form-control form-data" name='salary' id="salary" value="" required />
+              </div>
+
+              <div class="form-group" style="width: 400px;margin-top: -80px">
+                <label for="postname">Post Name</label>
+                <input type="text" class="form-control form-data" name='postname' id="postname" value="" required  />
+                </div>
+               
+                <div class="form-group" style="width: 400px;">
+                  <label for="experience">Experience Required</label>
+                  <input type="text" class="form-control form-data" name='experience' id="experience" value="" required />
+                  </div>
+            
+            
+<br><br>
+          <a href="http://127.0.0.1:8000/"> <button  class="btn btn-primary">Submit</button></a> 
+
+
+        </form>
+      {% comment %} </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="text_center">previous feedback</h2>
+                {%for i in messages%}
+                    {{i.name}}
+                {%endfor%}
+        </div>
+      </div> {% endcomment %}
+
+      <!-- Optional if you want to give a completion feedback! -->
+      <div id="completion-msg" style="display: none;">
+        Thank you for completing this form!
+      </div>
+
+    </div>
+<br>
+
+ 
+  </body>
+ 
+</html>

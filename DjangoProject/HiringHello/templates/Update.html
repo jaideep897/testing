@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <style>
+          .form-data::after {
+        content: ' *';
+        color: red;
+          }
+
+          input:invalid {
+        border: 3px solid slategrey;
+      }
+
+      input:invalid:required {
+        background-color: #d4e3f1;
+      }
+
+      input:valid {
+        border: 2px solid black;
+          background-color: white;
+      }
+      </style>
+  </head>
+  <body style="border: 3px solid #9b8d8d;margin-left:100px;margin-right: 100px;margin-top: 10px;margin-bottom: 10px;background-color: gainsboro">
+     
+  <div class="container">
+      <br>
+        <h1>Candidate Detail</h1>
+      <br>
+      <div id="form">
+        <form action="{% url 'updated' mem.id %}" method="POST" style="background-color: slategrey;border: 3px solid cornflowerblue;padding: 50px;padding-top: 50px;padding-bottom: 50px;align-content: center">
+{% csrf_token %}
+          <div class="form-group" style="width: 400px">
+
+            <label for="Name">Name</label>
+            <input required type="text" class="form-control form-data" id="Name" name="name" value="{{mem.name}}"/>
+
+          </div>
+
+          <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="Contact" >Contact</label>
+            <input type="number" class="form-control form-data" name='contact'  id="Contact" value="{{mem.contact}}" required/>
+          </div>
+
+          <div class="form-group" style="width: 400px">
+            <label for="DOB">DOB</label>
+            <input  type="date" class="form-control form-data" name='DOB' id="DOB" value="{{mem.DOB}}" required/>
+          </div>
+
+          <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="Company Name">Company Name</label>
+            <input required type="text" class="form-control form-data" name='CompanyName' id="Company Name" value="{{mem.CompanyName}}">
+          </div>
+
+          <div class="form-group" style="width: 400px">
+            <label for="Current position">Current position</label>
+            <input required type="text" class="form-control form-data" name='Currentposition' id="Currentposition" value="{{mem.currentposition}}">
+          </div>
+
+            <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="Experience">Experience</label>
+            <input required type="text" class="form-control form-data" name='Experience' id="Currentposition" value="{{mem.Experience}}">
+      
+          </div>
+
+            <div class="form-group" style="width: 400px">
+            <label for="CTC">CTC</label>
+            <input  type="text" class="form-control form-data" name='CTC'id="CTC" value="{{mem.CTC}}" required/>
+          </div>
+
+            <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="ECTC">ECTC</label>
+            <input required type="text" class="form-control form-data" name='ECTC' id="ECTC" value="{{mem.ECTC}}">
+          </div>
+
+            <div class="form-group" style="width: 400px">
+            <label for="Notice">Notice</label>
+            <input required type="text" class="form-control form-data" name='Notice' id="Notice" value="{{mem.Notice}}">
+          </div>
+
+            <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="preferrence">Job Location</label>
+            <input required type="text" class="form-control form-data" name='job' id="Notice" value="{{mem.JobLocation}}">
+   
+          </div>
+
+            <div class="form-group" style="width: 400px">
+            <label for="Source">Source</label>
+            <input type="url" class="form-control form-data" name='Source' id="Source" required oninvalid="setcustomvalidity('enter you linkedin-ID here')" value="{{mem.source}}" />
+          </div>
+            <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="Communication Rating">Communication Rating</label>
+             <input required type="text" class="form-control form-data"  name='CommunicationRating'id="Communication Rating" min="1" max="5" value="{{mem.CommunicationRating}}"/>
+          </div>
+
+            <div class="form-group" style="width: 400px">
+            <label for="CV">CV</label>
+            <input required type="file" class="form-control form-data" name='CV' id="CV" value="{{mem.CV}}"/>
+          </div>
+
+            <div class="form-group" style="width: 400px;margin-left: 600px;margin-top: -80px">
+            <label for="Feedback">Feedback</label>
+            <input  type="text" class="form-control form-data" name='Feedback' id="Feedback"  style="height: 100px" value="{{mem.Feedback}}" required/>
+          </div>
+<br><br>
+            <button  class="btn btn-primary" onclick="send_data()">Submit</button>
+
+
+        </form>
+      {% comment %} </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="text_center">previous feedback</h2>
+                {%for i in messages%}
+                    {{i.name}}
+                {%endfor%}
+        </div>
+      </div> {% endcomment %}
+
+      <!-- Optional if you want to give a completion feedback! -->
+      <div id="completion-msg" style="display: none;">
+        Thank you for completing this form!
+      </div>
+
+    </div>
+<br>
+
+ 
+  </body>
+
+</html>

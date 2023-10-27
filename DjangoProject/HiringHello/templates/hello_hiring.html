@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>HIRING HELLO</title>
+<style>   
+  body{
+        background-color:#425664;
+        {% comment %} position: ; {% endcomment %}
+        {% comment %} scroll-behavior: smooth; {% endcomment %}
+    }
+
+    .U li {
+
+      background: white;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 10px;
+      list-style: none;
+      height: 145px;
+      width: 95%;
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 10px;
+
+
+    }
+
+    .U span {
+      display: contents;
+      cursor: pointer;
+
+
+    }
+ 
+   
+.hello{
+     margin-left:43px;
+     margin-top: 50px;
+     font-size: 30px;
+    
+    margin-right:1px;
+    padding-top:40px;
+    padding-bottom:50px;
+     padding-right: 20px;
+     padding-left: 20px;
+    border-radius: 0.1cm;
+     background-color:#C6AD8F;  
+
+
+    
+   }
+   
+   .hello a {
+    text-decoration:none;
+    color:#425664;
+    background-color:#e8e1db;
+    margin-left: auto;
+    box-shadow:5px 5px #425664;
+    border: 2px solid grey;
+  
+
+    
+   } 
+
+    .hello1{ 
+    margin-left:590px;
+    margin-top: -190px;
+    font-size: 30px;
+    
+    margin-right:600px;
+    padding-top:40px;
+    padding-bottom:50px;
+     border-radius: 0.1cm;
+     
+    background-color:#C6AD8F;
+
+     }
+
+   .hello1 a{
+  color:#425664;
+  text-decoration:none;
+  background-color:#e8e1db;
+  margin-left: auto;
+  padding-right: 20px;
+  margin-left: 20px;
+  box-shadow:5px 5px #425664;
+  border: 2px solid grey;
+
+  } 
+
+   .hello2{ 
+    margin-left:1100px;
+    margin-top: -200px;
+    font-size: 30px;
+    margin-right:80px;
+    padding-top:40px;
+    padding-bottom:50px;
+    background-color:#C6AD8F;
+    border-radius: 0.1cm;
+  }
+
+   .hello2 a{
+    margin-left: auto;
+    color:#425664;
+    text-decoration:none;
+    background-color:#e8e1db;
+    margin-left: auto;
+    padding-right: 20px;
+    margin-left: 20px;
+    box-shadow:5px 5px #425664;
+    border: 2px solid grey;
+    
+
+   } 
+
+    a{
+    width: 200px;
+    font-size: 25px;
+    padding: 10px;
+    
+    cursor: pointer;
+    
+    margin-bottom:-500px;
+  
+   } 
+
+   
+   /* .double_border{
+     border:3px solid grey;
+     height:400px;
+     padding-top:10px;
+     margin-top: 50px;
+     margin-right:20px;
+     margin-left: 20px;
+     background-color: #425664;
+         
+     } */
+
+      h1{
+      text-align:center;
+      color: #425664;
+      background-color:#e8e1db;
+      margin-top:-10px;
+      height: 70px;
+      width:1500px;
+      font-size: 50px;
+      margin-left: -7px;
+    }
+    
+      h2{
+    
+      text-align:center;
+      color: #425664;
+      /* background-color: #b9f2ff; */
+      margin-top:-10px;
+      height: 70px;
+      width:100%;
+      font-size: 30px;
+      margin-left: -7px;
+      }
+       
+      .modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #cccccc;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+      }
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #eeeeee;
+        padding: 1rem 1.5rem;
+        width: 24rem;
+        border-radius: 0.5rem;
+      }
+      .close-button {
+        float: right;
+        width: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+      
+        background-color: #eeeeee;
+      }
+      .close-button:hover {
+        background-color: #ff3232;
+      }
+      .show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.0);
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+      }
+
+  input{
+  background-color: transparent;
+  border: 1px solid #76aee6;
+  border-radius: 0.1cm;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: rgb(1, 19, 17);
+  padding: 10px;
+}
+input:hover {
+   border: 2px solid #76aee6;
+   background-color: #cbe1f8;
+   color:black;
+}
+
+.add-job{
+  font-size:40px;
+   text-align: center;
+   margin-top: 5%;
+   color: aliceblue;
+   
+
+}
+
+.add-job button{
+  font-size:30px;
+  
+  margin: auto;
+       
+        cursor: pointer;
+        padding: 0 40px;
+        border: 0px;  
+        border-radius: 25px;
+        background-color: aliceblue;
+        color: blue;
+        transition: .3s linear;
+}
+.add{
+  font-size:40px;
+   text-align: center;
+   
+   
+
+}
+
+.add button{
+  font-size:30px;
+  
+  margin: auto;
+       
+        cursor: pointer;
+        padding: 0 40px;
+        border: 0px;
+       
+        border-radius: 25px;
+       
+        background-color: aliceblue;
+        color: blue;
+        transition: .3s linear;
+}
+
+   
+@media (orientation:portrait){
+  h1{
+    
+    color: #425664;
+    background-color:#C6AD8F;
+    margin-top:-10px;
+    height: 70px;
+    width:1550px;
+    font-size: 40px;
+    padding-left: 100px;
+    margin-left: -680px;
+
+    
+  } 
+}
+  @media (orientation:portrait){
+   .hello{
+    margin-left:13px;
+    margin-top: 40px;
+    font-size: 30px;
+    
+    margin-right:610px;
+    padding-top:-50px;
+    padding-bottom:35px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    background-color:#C6AD8F;
+    }
+   
+    .hello a {
+    text-decoration:none;
+    color:white;
+    background-color:#425664;
+    margin-left: auto;
+    padding-right:70px;
+  
+
+    
+   }
+   
+}
+@media (orientation:portrait){
+   .hello1{ 
+    margin-left:10px;
+    margin-top: 100px;
+    font-size: 30px;
+    
+    margin-right:620px;
+    padding-top:-50px;
+    padding-bottom:35px;
+     
+     
+     background-color:#C6AD8F;
+
+     }
+    
+     .hello1 a{
+    color:white;
+    text-decoration:none;
+    color:white;
+    background-color:#425664;
+    margin-left: auto;
+   padding-right: 20px;
+   margin-left: 20px;
+   padding-right:80px;
+
+   } 
+  }
+  @media (orientation:portrait){
+   .hello2{ 
+    margin-left:10px;
+    margin-top:100px;
+    font-size: 30px;
+    
+    margin-right:620px;
+   
+    padding-bottom:35px;
+     
+     
+    background-color:#C6AD8F;
+
+     
+
+
+    }
+
+   .hello2 a{
+    /* margin-left: auto; */
+    color:white;
+    text-decoration:none;
+    color:white;
+    background-color:#425664;
+    /* padding-right: 20px; */
+   margin-left: 20px;
+   padding-right:80px;
+   /* text-align: center; */
+    
+
+   } 
+  }
+   @media (orientation:portrait){
+
+    a{
+    width: 200px;
+    font-size:30px;
+    padding: 10px;
+    border: 2px solid grey;
+    cursor: pointer;
+    
+    margin-bottom:-500px;
+  
+   } 
+ 
+  }
+   
+  
+</style>
+
+</head>
+
+<body>
+       <h1><b> Hiring Hello</b></h1>
+    
+
+
+    <div class="hello">
+  
+
+    
+      <a href="{% url 'form' %}" style="margin-left:18px;" > Candidate List  </a>  <br><br>
+ <a href="{% url 'saveEnquiry' %}" >   Add Candidate  <i class="fa fa-plus-circle"></i> </a>
+       
+    
+            
+
+</div>
+
+    <div class="hello1">
+      <a href="{% url 'company_form' %}" style="margin-left:33px;" > Company List </a> <br><br>
+         
+            <a href="{% url 'company' %}" >   Add Company  <i class="fa fa-plus-circle"></i> </a> 
+       
+    </div>  
+
+    <div class="hello2">
+         <a href="{% url 'technology_show' %}" style="margin-left:30px;" >  Technology List</a><br><br>
+       
+        <a class="example" href="{% url 'Technology' %}" > Add Technology   <i class="fa fa-plus-circle"></i></a>  
+   
+</div> 
+
+  
+ <div class="add-job"> 
+  Open Position &nbsp;&nbsp; <a href="{% url 'Add-job'%}"> <button> Add-Job</button></a>
+ </div>
+ 
+
+  {% comment %} let modal = document.querySelector(".modal");
+  let trigger = document.querySelector(".example");
+  let closeButton = document.querySelector(".close-button");
+
+  function toggleModal() {
+    modal.classList.toggle("show-modal");
+  }
+  function windowOnClick(event) {
+    if(event.target === modal) {
+      toggleModal();
+    }
+  }
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick); {% endcomment %}
+{% comment %} </script> {% endcomment %}
+<div class="U">
+ 
+
+  <ul style="margin-top: 10px;  "> <b>
+      <li scope="row" >  Company: &nbsp; Ethereal <br> <br>
+        post_date:&nbsp;&nbsp;oct.4,2023 <br><br>
+        technology:&nbsp;&nbsp; python<br><br>
+         
+        salary_LPA:&nbsp;&nbsp;50000<br>
+        
+  </ul>
+  
+</div>
+
+
+<div class="U">
+  {% for i in messages %}
+
+  <ul style="margin-top: 10px;  "> <b>
+      <li scope="row" ><style> S.no. &nbsp;&nbsp; {{i.id}}</style> Company: &nbsp;{{i.Company_Name}} <br> <br>
+        post_date:&nbsp;&nbsp; {{i.post_date}} <br><br>
+        technology:&nbsp;&nbsp; {{i.technology}} <br><br>
+         
+        salary_LPA:&nbsp;&nbsp; {{i.salary_LPA}} <br>
+        
+  </ul>
+  {%endfor%}
+</div>
+<div class="add"> 
+  <a href="{% url 'view-job'%}" style="border: none; border-radius: none;"><button> View-All</button></a> 
+  </div>
+
+ 
+       
+  </body>
+    </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Candidate-list</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+      background: #003333;
+    }
+
+    .H h1 {
+      background: #66CCCC;
+      text-align: center;
+      height: 60px;
+      font-size: 34px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .backspace {
+      align-items: left;
+      background-color: #66CCCC;
+      width: 100%;
+      cursor: pointer;
+      height: 20px
+    }
+
+
+
+
+
+    .U li {
+
+      background: white;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 10px;
+      list-style: none;
+      height: 250px;
+      width: 95%;
+      border-radius: 10px;
+      margin-top: 10px;
+      padding: 10px;
+
+
+    }
+
+    .U span {
+      display: contents;
+      cursor: pointer;
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div class="backspace">
+  <a href="http://127.0.0.1:8000/"><span class="material-symbols-outlined"
+      style="margin-top: 46px; background: #66CCCC; margin-left: 0px; font-size: 34px;">arrow_back</span></a>
+  </div>
+  <div class="H">
+    <h1>Company List Page</h1> <br>
+  </div>
+
+
+  <div class="U">
+    {% for i in  view %}
+
+    <ul style="margin-top: 10px;"> <b>
+        <li scope="row" ><style> S.no. &nbsp;&nbsp; {{i.id}}</style> Company-Name: &nbsp;{{i.Company_Name}} <br> <br>
+          Contact:&nbsp;&nbsp; {{i.contact}} <br><br>
+          E-Mail:&nbsp;&nbsp; {{i.Email}} <br><br>
+          Source:&nbsp;&nbsp; {{i.source}} <br><br>
+          City:&nbsp;&nbsp; {{i.city}} <br><br>
+          Company Address:&nbsp;&nbsp; {{i.address}} <br><br> 
+          Company_Website:&nbsp;&nbsp; {{i.website}} <br><br> 
+    </ul>
+    </b>
+    {% endfor %}
+  </div>
+
+
+</body>
+
+</html>

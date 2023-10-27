@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>HIRING HELLO</title>
+<style>   
+  body{
+        background-color:#425664;
+        position: fixed;
+    }
+   
+/* .hello{
+     margin-left:43px;
+     margin-top: 50px;
+     font-size: 30px;
+    
+    margin-right:1200px;
+    padding-top:40px;
+    padding-bottom:50px;
+     padding-right: 20px;
+     padding-left: 20px;
+    border-radius: 0.1cm;
+     background-color:#C6AD8F;  
+
+
+    
+   }
+   
+   .hello a {
+    text-decoration:none;
+    color:#425664;
+    background-color:#e8e1db;
+    margin-left: auto;
+  
+
+    
+   } 
+
+    .hello1{ 
+    margin-left:590px;
+    margin-top: -190px;
+    font-size: 30px;
+    
+    margin-right:650px;
+    padding-top:40px;
+    padding-bottom:50px;
+     border-radius: 0.1cm;
+     
+    background-color:#C6AD8F;
+
+     }
+
+   .hello1 a{
+  color:#425664;
+  text-decoration:none;
+  background-color:#e8e1db;
+  margin-left: auto;
+  padding-right: 20px;
+  margin-left: 20px;
+
+  } 
+
+   .hello2{ 
+    margin-left:1100px;
+    margin-top: -200px;
+    font-size: 30px;
+    margin-right:120px;
+    padding-top:40px;
+    padding-bottom:50px;
+    background-color:#C6AD8F;
+    border-radius: 0.1cm;
+  }
+
+   .hello2 a{
+    margin-left: auto;
+    color:#425664;
+    text-decoration:none;
+    background-color:#e8e1db;
+    margin-left: auto;
+    padding-right: 20px;
+    margin-left: 20px;
+    
+
+   } 
+
+    a{
+    width: 200px;
+    font-size: 25px;
+    padding: 10px;
+    border: 3px solid grey;
+    cursor: pointer;
+    box-shadow:5px 5px rgb(109, 109, 109);
+    margin-bottom:-500px;
+  
+   }  */
+
+   /* .double_border{
+     border:3px solid grey;
+     height:400px;
+     padding-top:10px;
+     margin-top: 50px;
+     margin-right:20px;
+     margin-left: 20px;
+     background-color: #425664;
+         
+     } */
+
+     h1{
+      text-align:center;
+      color: #425664;
+      background-color:#e8e1db;
+      margin-top:-10px;
+      height: 70px;
+      width:1500px;
+      font-size: 50px;
+      margin-left: -7px;
+    }
+    
+       h2{
+    
+      text-align:center;
+      color: #425664;
+      
+      margin-top:-5px;
+      height: 70px;
+      width:100%;
+      font-size: 30px;
+      margin-left: 1.5px;
+      }
+       
+        .modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #cccccc;
+         /* opacity: 0; */
+        /* visibility: hidden; */
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; 
+      }
+      .modal-content {
+         position: absolute; 
+         top: 50%;
+        left: 50%;
+       transform: translate(-50%, -50%);
+        background-color: #eeeeee;
+         padding: 1rem 1.5rem;
+        width: 24rem; 
+        border-radius: 0.5rem;
+      } 
+      .close-button {
+        float: right;
+        width: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 30px;
+        background-color: #eeeeee;
+      }
+      .close-button:hover {
+        background-color: #ff3232;
+      }
+      .show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.0);
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+      } 
+
+   input{
+  background-color: transparent;
+  border: 1px solid #76aee6;
+  border-radius: 0.1cm;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: rgb(1, 19, 17);
+  padding: 10px;
+}
+input:hover {
+   border: 2px solid #76aee6;
+   background-color: #cbe1f8;
+   color:black;
+} 
+
+
+      /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f7ff;
+  overflow: hidden;
+}
+
+.toast {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active {
+  transform: translateX(0%);
+}
+
+.toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+
+.toast-content .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 35px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.message .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.message .text.text-1 {
+  font-weight: 600;
+  color: #333;
+}
+
+.toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.toast .close:hover {
+  opacity: 1;
+}
+
+.toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+
+}
+
+.toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+}
+
+.progress.active:before {
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: #4070f4;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0e4bf1;
+}
+
+.toast.active ~ button {
+  pointer-events: none;
+} */
+/* media tag start*/
+    
+/* @media(width < 600px){
+     background{
+      display:flex;
+      position: fixed;
+      overflow: hidden;
+     }
+@media(600px<= width < 840px){
+     background{
+      display:flex;
+      position: fixed;
+      overflow: hidden;
+     }
+@media(width >= 840px	){ 
+  background{
+      display:flex;
+      position: fixed;
+      overflow: hidden;
+  }
+
+  @media(height < 480px){
+    background{
+      display:flex;
+      position: fixed;
+      overflow: hidden;
+  }
+  @media(480px <= height < 900px){
+    background{
+      display:flex;
+      position: fixed;
+      overflow: hidden;
+  }
+}
+}
+}
+}
+/* } 
+@media (orientation:portrait){
+  h1{
+    
+    color: #425664;
+    background-color:#C6AD8F;
+    margin-top:-10px;
+    height: 70px;
+    width:1550px;
+    font-size: 40px;
+    padding-left: 100px;
+    margin-left: -680px;
+
+    
+  } 
+}
+  @media (orientation:portrait){
+   .hello{
+    margin-left:13px;
+    margin-top: 40px;
+    font-size: 30px;
+    
+    margin-right:610px;
+    padding-top:-50px;
+    padding-bottom:35px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    background-color:#C6AD8F;
+    }
+   
+    .hello a {
+    text-decoration:none;
+    color:white;
+    background-color:#425664;
+    margin-left: auto;
+    padding-right:70px;
+  
+
+    
+   }
+   
+}
+@media (orientation:portrait){
+   .hello1{ 
+    margin-left:10px;
+    margin-top: 100px;
+    font-size: 30px;
+    
+    margin-right:620px;
+    padding-top:-50px;
+    padding-bottom:35px;
+     
+     
+     background-color:#C6AD8F;
+
+     }
+    
+     .hello1 a{
+    color:white;
+    text-decoration:none;
+    color:white;
+    background-color:#425664;
+    margin-left: auto;
+   padding-right: 20px;
+   margin-left: 20px;
+   padding-right:80px;
+
+   } 
+  }
+  @media (orientation:portrait){
+   .hello2{ 
+    margin-left:10px;
+    margin-top:100px;
+    font-size: 30px;
+    
+    margin-right:620px;
+   
+    padding-bottom:35px;
+     
+     
+    background-color:#C6AD8F;
+
+     
+
+
+    }
+
+   .hello2 a{
+    /* margin-left: auto; */
+    /* color:white;
+    text-decoration:none;
+    color:white;
+    background-color:#425664;
+    /* padding-right: 20px; */
+   /* margin-left: 20px;
+   padding-right:80px; */
+   /* text-align: center; */
+    
+
+   /* } 
+  }
+   @media (orientation:portrait){
+
+    a{
+    width: 200px;
+    font-size:30px;
+    padding: 10px;
+    border: 2px solid grey;
+    cursor: pointer;
+    
+    margin-bottom:-500px;
+  
+   } 
+ 
+  }   */
+   
+  
+</style>
+
+</head>
+
+<body>
+       <h1><b> Hiring Hello</b></h1>
+    
+<!-- 
+
+    <div class="hello">
+  
+
+    
+    <a href="{% url 'saveEnquiry' %}" >   Add Candidate  <i class="fa fa-plus-circle"></i> </a> <br><br>
+    
+       <a href="{% url 'form' %}"  > Candidate List   <i class="fa fa-plus-circle"></i> </a> 
+    
+            
+
+</div>
+
+    <div class="hello1">
+            <a href="{% url 'company' %}" >   Add Company  <i class="fa fa-plus-circle"></i> </a> <br><br>
+            <a href="{% url 'company_form' %}" > Company List   <i class="fa fa-plus-circle"></i> </a> 
+       
+    </div>  
+
+    <div class="hello2">
+        <a class="example"> Add Technology   <i class="fa fa-plus-circle"></i></a>  <br><br>
+        <a href="{% url 'technology_show' %}" >  Technology List  <i class="fa fa-plus-circle"></i> </a> 
+   
+</div> -->
+
+<div class="modal">
+  <form form="" method="POST" style=" margin-left: 55px;">
+    {% csrf_token %}
+   <div class="modal-content" style="border:3px solid grey;">
+    <span class="close-button">&times;</span>
+    <h2>Technology</h2>
+    <div style="border:2px solid grey;padding-top: 50px;margin-top:-50px;margin-bottom: -40px;padding-bottom: 50px;margin-left:0px; width:100%;background-color:#fdf5e6;;height:10px;padding-bottom: -30px;">
+    <!-- <label for="technology Name" style="margin-top: 30px;margin-left:30px;">Technology :</label><br><br> -->
+        <input style="margin-left:35px;width:300px;" type="text" class="form-control form-data" name='Technology_Name' id="technology Name" placeholder="Technology Name :" required/><br>
+    </div>
+    <div>
+     <button style="margin-top: 50px;margin-left: 160px;margin-bottom: 10px;padding-left: 30px;padding-right:30px;background-color: rgb(37, 102, 222);color:white;border-color:white;" >ok</button>
+    </div>
+    </form>
+
+  </div>
+</div> 
+ 
+    </html>
